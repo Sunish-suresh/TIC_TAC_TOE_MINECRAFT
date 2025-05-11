@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styletic-tac-toe.css">
+
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- MODE SELECTION 
+   PLAY WITH FRIENDS 
+   PLAY WITH COMPUTER-->
+  <div id="modeSelection" class="mode-screen">
+    <h1>Select Mode</h1>
+    <button onclick="startGame('friend')" class="modebtn">Play with Friend</button>
+    <button onclick="startGame('computer')" class="modebtn">Play with Computer</button>
+</div>
+
+  <div class="centerdiv">
+    <div class="container">
+      <div class="topsection hide">
+
+        <!-- WIN OR DRAW POP UP -->
+        
+        <div class="winnerpop"></div>
+      </div>
+      
+      <!-- PLAY AREA -->
+      
+      <div class="mainbox" onclick="
+        playermove(event);
+        ">
+        <button class="button"></button>
+        <button class="button"></button>
+        <button class="button"></button>
+        <button class="button"></button>
+        <button class="button"></button>
+        <button class="button"></button>
+        <button class="button"></button>
+        <button class="button"></button>
+        <button class="button"></button>
+      </div>
+
+      <!-- RESET BUTTON -->
+      
+      <div class="reset_button reset">
+        <button 
+        onclick="
+        reset();
+        " class ="resetbtn">
+        </button>
+
+        <!--BACK TO SELECTION MODE  -->
+      
+        <button onclick="showModeScreen();"class="modeupdate">MODE</button>
+      </div>
+    </div>
+  </div>
+  <script src="script-tic-tac-toe.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+.centerdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainbox {
+  margin: 5px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  justify-content: center;
+  gap: 10px;
+}
+.mainbox button {
+  height: 75px;
+  width: 75px;
+  border: none;
+  background-image: url('buttonbackground.png');
+  background-size: cover;
+  font-size: 25px;
+  color: white;
+}
+.hide {
+  display: none !important;
+}
+.winnerpop {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  width: 100px;
+  font-weight: bold;
+}
+.winnerpop p{
+  position: relative;
+  z-index: 3px;
+  text-align: center;
+}
+.topsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('winingbackground.png');
+  background-size: 200px 160px;
+  background-position: 90px -15px;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 400px;
+}
+.reset_button {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  backdrop-filter: blur(1px);
+  background-color: rgba(176, 60, 180, 0);
+  margin: 10px;
+  padding: 10px;
+  height: 600px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border:none ;
+  border-radius: 10px;
+}
+.reset {
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+body {
+  background-image: url('background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+.newbutton,
+.drawbutton {
+  position: relative;
+  border: none;
+  background-image: url('gamemode.png');
+  background-size: cover;
+  height: 40px;
+  padding: 4px;
+  color: white;
+  font-weight: bold;
+  background-position: 160px;
+  box-shadow: hsla(212, 13%, 26%, 0.405) 0px 7px 0px 0px;
+  background-color: hsl(210deg 100% 44%);
+  overflow: hidden;
+  transition: 31ms cubic-bezier(.5, .7, .4, 1);
+}
+.newbutton::before,
+.drawbutton::before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  opacity: 1;
+}
+.newbutton:active,
+.drawbutton:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: 35ms cubic-bezier(.5, .7, .4, 1);
+}
+.newbutton:hover::before,
+.drawbutton:hover::before {
+  transition: all 0s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.resetbtn {
+  height: 70px;
+  width: 70px;
+  background-image: url('resetbackground.png');
+  background-size: cover;
+  border: none;
+  background-color: rgba(81, 81, 81, 0);
+}
+.mode-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.modebtn {
+  padding: 15px 30px;
+  width: 350px;
+  font-size: 20px;
+  border: 2px solid black;
+  background-image: url('gamemode.png');
+  background-size: contain;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+.modeupdate {
+  margin-top: 10px;
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  border: 2px solid black;
+  background-image: url('gamemode.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  
+}
+.modebtn::before,
+.modeupdate::before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  opacity: 1;
+}
+.modebtn:active,
+.modeupdate:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: 35ms cubic-bezier(.5, .7, .4, 1);
+}
+.modebtn:hover::before,
+.modeupdate:hover::before {
+  transition: all 0s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.modebtn,
+.modeupdate {
+  position: relative;
+  border: none;
+  background-image: url('gamemode.png');
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+  box-shadow: hsla(212, 13%, 26%, 0.405) 0px 7px 0px 0px;
+  background-color: hsl(210deg 100% 44%);
+  overflow: hidden;
+  transition: 31ms cubic-bezier(.5, .7, .4, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.modebtn {
+  padding: 15px 30px;
+  width: 350px;
+  font-size: 20px;
+}
+.modeupdate {
+  margin-top: 10px;
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  padding: 0;
+}
+.resetbtn {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  background-image: url('resetbackground.png');
+  background-size: cover;
+  border: none;
+  box-shadow: hsla(212, 13%, 26%, 0) 0px 7px 0px 0px;
+  overflow: hidden;
+  transition: 31ms cubic-bezier(.5, .7, .4, 1);
+}
+.resetbtn::before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+.resetbtn:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: 35ms cubic-bezier(.5, .7, .4, 1);
+}
+.resetbtn:hover::before {
+  transition: all 0s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+h1{
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  backdrop-filter: blur(1px);
+  background-color: rgba(10, 10, 10, 0.036);
+  
+}
